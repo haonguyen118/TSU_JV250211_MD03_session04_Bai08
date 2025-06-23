@@ -24,30 +24,14 @@ public class Main {
         // In ra mang ban dau
         System.out.println("Mang vua nhap:\n" +
                 "arr = "+ Arrays.deepToString(arr));
-         //doi hang thanh cot
+         //Xoay mang
         int[][]newArr = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-
-                newArr[i][j] = arr[j][i] ;
-
-
-            }
-
-        }
-        //sau khi doi hang thanh cot
-        System.out.println("Mang sau khi da doi hang thanh cot:\n" +
-                "arr = "+ Arrays.deepToString(newArr));
-        // Hoan doi vi tri index cua cac phan tu trong hang
-
-        for(int i = 0; i < newArr.length; i++){
-            for(int j = 0; j < newArr[i].length/2; j++){
-                int temp = newArr[i][j];
-                newArr[i][j] = newArr[i][newArr[i].length-j-1];
-                newArr[i][newArr[i].length-j-1] = temp;
-
+                newArr[i][j] = arr[n-j-1][i] ;
             }
         }
+       //In ra mang da xoay
         System.out.println("Mang sau khi da xoay 90do:\n" +
                 "arr = "+ Arrays.deepToString(newArr));
     }
